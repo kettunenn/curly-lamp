@@ -104,7 +104,7 @@ def feature_extraction(b=3, path="data/IMS/1st_test/", save_to_csv=False, redo_f
 
     return df_features
 
-def preprocessing(df, save_to_csv=False, b=3, use_normalization=False, trim_start=True, trim_val=175, path="data/IMS/1st_test/"):
+def preprocessing(df, save_to_csv=False, b=3, use_normalization=True, trim_start=True, trim_val=175, path="data/IMS/1st_test/"):
     
     if trim_start == True or trim_val != 175:
         df = df.iloc[trim_val:] 
@@ -166,14 +166,7 @@ def create_model(train_data, test_data):
 
     autoencoder.compile(optimizer='adam', loss='mae')
 
-    history = autoencoder.fit(normal_train_data, normal_train_data,
-          epochs=20,
-          batch_size=512,
-          validation_data=(test_data, test_data),
-          shuffle=True)
-    
-
-    return history
+    return autoencoder
 
 
 def main():
