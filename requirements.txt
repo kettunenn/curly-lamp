@@ -1,0 +1,15 @@
+# main packagees
+numpy
+pandas
+matplotlib
+scipy
+scikit-learn
+tensorflow
+
+#For downloading data
+tqdm
+requests
+patool
+
+#ipynb support
+jupyter

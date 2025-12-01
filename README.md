@@ -1,4 +1,4 @@
-AI/ML project for a graduate level course in optimization for industrial systems
+'AI/ML project for a graduate level course in optimization for industrial systems
 
 Tested on the NASA open-source dataset found in  https://data.nasa.gov/dataset/ims-bearings
 

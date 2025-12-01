@@ -1,0 +1,7 @@
+data/
+FOES32
+**/__pycache__
+DVA477
+
+main.*
+!main.tex
