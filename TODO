@@ -1,0 +1,65 @@
+General project direction 
+
+1. Load dataset 
+
+2. Create datasets
+    Healthy
+    Inner race defect
+    Roller element defect
+
+        These can be labeled
+        Then we can calculate F1 score etc.
+
+3. Filter noise?
+
+4. Extract features:
+    - ["Crest Factor", 
+        "RMS", 
+        ¨Impulse Factor", 
+        "Margin Factor", 
+        "Shape Factor", 
+        "Peak-Peak Value"]
+    Feature selection [1]
+
+4.1 Chunk features?
+        How do we do this?
+            Over each file or the entire dataset?
+
+
+5. Itterate over each feature to find the best ARMA model for each feature 
+    Based on AIC and BIC values select ARMA model
+
+
+6. Run ARMA model for each feature for anomaly detection
+    Question: How do we do this? 
+    Currently: We use the model for forcasting, then we can calculate the threshold between prediction and actual?
+
+    This has to be tested on all datasets
+
+
+7. Test two Neural networks, 
+    a simple autoencoder 
+    and a autoencoder with LSTM
+
+    Or maybe a simple RNN or CNN, this would propbably be more interesting.
+
+8. Optimization
+    Three options:
+        Optimize dataset training speed
+        Optimize model for edge 
+        Optimize model hyperparameters with GA
+
+9. Transformer
+    Test two small transformers that could be evaluated on a microcontroller
+
+
+
+
+10. Uncertainy pricinpel?
+
+
+11. Transfer all models to Edge platform, benchmark inference speed, performance? 
+
+
+
+[1]: Applying Stochastic Models to Analyze Vibration Features of Roller Bearings
